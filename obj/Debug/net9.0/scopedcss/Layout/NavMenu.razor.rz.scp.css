@@ -1,0 +1,69 @@
+.top_row[b-r1r623j3hl]{
+    background-image: linear-gradient(to right, rgb(5, 5, 5) 0%, rgb(30, 32, 36) 70%);
+}
+
+.title[b-r1r623j3hl]{
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.nav-link[b-r1r623j3hl] {
+    color: rgb(255, 255, 255);
+    text-decoration: none;  
+    transition: 0.3s;  
+}
+  
+.nav-link:hover[b-r1r623j3hl] {
+    color: #77b0ea;     
+}
+  
+.nav-link.active[b-r1r623j3hl] {
+    color: #dc3545; 
+}
+
+.menu[b-r1r623j3hl]{
+    color: white;
+    padding: 5px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.navbar-toggler[b-r1r623j3hl] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand[b-r1r623j3hl] {
+    font-size: 1.1rem;
+}
+
+.navbar-toggler-icon[b-r1r623j3hl] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Custom breakpoint where hamburger goes away */
+@media (min-width: 880px) {
+    .navbar .navbar-collapse[b-r1r623j3hl] {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    .navbar-toggler[b-r1r623j3hl] {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 879px) {
+    .navbar .navbar-collapse[b-r1r623j3hl] {
+      display: none;
+    }
+  
+    .navbar-collapse.show[b-r1r623j3hl] {
+      display: block !important;
+    }
+  
+    .navbar-toggler[b-r1r623j3hl] {
+      display: block;
+    }
+}

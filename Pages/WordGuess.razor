@@ -1,0 +1,108 @@
+@page "/wordguess"
+@* @using Microsoft.AspNetCore.Components.Web *@
+
+<div>
+    <h1><b>WORD GUESS</b></h1><br>
+    <h2>Guess the word below:</h2>
+    <h2>@string.Join(" ", DisplayLetters)</h2>
+
+    <h4>Wrong guesses:</h4> <span>@string.Join(", ", WrongLetters)</span><br />
+    <h4>Remaining guesses:</h4> <span>@RemainingGuesses</span><br />
+    <h4>Total Wins:</h4> <span>@CountWins</span><br />
+    <h4>Total Losses:</h4> <span>@CountLosses</span><br />
+
+    <input @bind="CurrentInput" @onkeydown="HandleKeyPress" maxlength="1" placeholder="Type a letter" />
+    <br><br><br><br><br><br>
+    <NavLink href="/showcase" class="btn btn-primary">← Back to Showcase</NavLink>
+</div>
+
+@code {
+    private int CountWins = 0;
+    private int CountLosses = 0;
+    private int RemainingGuesses = 10;
+
+    private string SelectedWord = string.Empty;
+    private List<char> LettersInSelectedWord = new();
+    private List<string> DisplayLetters = new();
+    private List<char> WrongLetters = new();
+
+    private string CurrentInput = string.Empty;
+
+    
+    private readonly string[] WordList = 
+    { "university", "computer", "country", "technology", "information", 
+      "sport", "program", "software", "keyboard", "international"};
+
+    protected override void OnInitialized()
+    {
+        StartGame();
+    }
+
+    private void StartGame()
+    {
+        var random = new Random();
+        SelectedWord = WordList[random.Next(WordList.Length)];
+        LettersInSelectedWord = SelectedWord.ToCharArray().ToList();
+        DisplayLetters = LettersInSelectedWord.Select(_ => "_").ToList();
+        WrongLetters.Clear();
+        RemainingGuesses = 10;
+        CurrentInput = string.Empty;
+
+        Console.WriteLine($"Selected Word: {SelectedWord}");
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key.Length == 1 && char.IsLetter(e.Key[0]))
+        {
+            var guessedChar = char.ToLower(e.Key[0]);
+
+            CheckLetter(guessedChar);
+            await RoundComplete();
+        }
+    }
+
+    private void CheckLetter(char letter)
+    {
+        bool letterInWord = false;
+
+        for (int i = 0; i < LettersInSelectedWord.Count; i++)
+        {
+            if (LettersInSelectedWord[i] == letter)
+            {
+                DisplayLetters[i] = letter.ToString();
+                letterInWord = true;
+            }
+        }
+
+        if (!letterInWord && !WrongLetters.Contains(letter))
+        {
+            WrongLetters.Add(letter);
+            RemainingGuesses--;
+        }
+    }
+
+    private async Task RoundComplete()
+    {
+        Console.WriteLine($"Wins: {CountWins} | Losses: {CountLosses} | Remaining: {RemainingGuesses}");
+
+        if (string.Join("", DisplayLetters) == SelectedWord)
+        {
+            await JS.InvokeVoidAsync("alert", "You win!");
+            CountWins++;
+            StartGame();
+        }
+        else if (RemainingGuesses <= 0)
+        {
+            await JS.InvokeVoidAsync("alert", $"You lose! The word was '{SelectedWord}'");
+            CountLosses++;
+            StartGame();
+        }
+
+        StateHasChanged();
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; } = default!;
+}
+

@@ -1,0 +1,28 @@
+@page "/contact"
+
+<PageTitle>Contact</PageTitle>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4">
+        <div class="centered-content mx-auto text-start">
+            <form class="form" action="https://formspree.io/f/xpwjgqoz" method="POST">
+                <h1>Contact Me</h1><br>
+                <div>
+                    <label>Name:</label><br>
+                    <input type="text" class="form-control" name="name" required><br />
+                </div>
+                
+                <div>
+                    <label>Email:</label><br>
+                    <input type="email" class="form-control" name="email" required><br />
+                </div>
+
+                <div>
+                    <label>Message:</label><br>
+                    <textarea name="message" class="form-control" required rows="10"></textarea><br />
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

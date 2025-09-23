@@ -1,0 +1,16 @@
+.background-image[b-v9rf77xbvc] {
+    background-image: url('/images/profile.png');    
+    background-size: cover;                          
+    background-position: center;                     
+    background-repeat: no-repeat;                    
+    min-height: 80vh;                               
+    text-align: center;
+    padding: 60px;                                  
+}
+
+.centered-content[b-v9rf77xbvc] {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+}

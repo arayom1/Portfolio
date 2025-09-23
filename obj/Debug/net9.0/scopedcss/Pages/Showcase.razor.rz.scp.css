@@ -1,0 +1,20 @@
+.container[b-4lxr19nemt] {
+    padding: 50px;
+}
+
+.card-img-top[b-4lxr19nemt] {
+    height: 250px;           
+    object-fit: cover;       
+    width: 100%;             
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title[b-4lxr19nemt] {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h1[b-4lxr19nemt] {
+    color: white;
+}

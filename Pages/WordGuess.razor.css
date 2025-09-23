@@ -1,0 +1,26 @@
+:root {
+    background-color: bisque;
+}
+
+header {
+    background-color: burlywood;
+    text-align: center;
+    border: 2px solid;
+    width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+div {
+    background-color: rgba(206, 190, 190, 0.4);
+    text-align: center;
+    border: 2px solid;
+    width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+h1 {
+    color: rgb(216, 166, 1);
+    margin-bottom: 20px;
+}

@@ -1,0 +1,24 @@
+.container[b-wxj0ji1blt]{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem auto; 
+}
+
+.form[b-wxj0ji1blt]{
+    padding: 2rem;
+}
+
+.centered-content[b-wxj0ji1blt] {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgba(101, 96, 96, 0.4);
+}
+
+textarea[b-wxj0ji1blt] {
+    max-height: 300px;
+    overflow-y: auto;
+    resize: vertical;
+}

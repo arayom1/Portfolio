@@ -1,0 +1,14 @@
+.container{
+    padding: 10px;
+}
+
+.centered-content {
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.4); 
+    overflow: auto; 
+}
