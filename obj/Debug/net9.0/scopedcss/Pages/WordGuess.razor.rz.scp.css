@@ -1,26 +1,53 @@
-:root[b-bpx05keig2] {
-    background-color: bisque;
+html[b-bpx05keig2], body[b-bpx05keig2] {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-header[b-bpx05keig2] {
-    background-color: burlywood;
-    text-align: center;
-    border: 2px solid;
-    width: 600px;
-    margin: 0 auto;
-    padding: 25px;
-}
-
-div[b-bpx05keig2] {
+.container[b-bpx05keig2]{
+    width: 90%;
+    max-width: 650px;
+    padding: 1rem;
+    box-sizing: border-box;
     background-color: rgba(206, 190, 190, 0.4);
-    text-align: center;
-    border: 2px solid;
-    width: 600px;
+    margin: 0px auto;
+}
+
+.content[b-bpx05keig2]{
+    max-width: 650px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 1rem;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 h1[b-bpx05keig2] {
     color: rgb(216, 166, 1);
     margin-bottom: 20px;
+}
+
+/* Make headers responsive */
+.content h1[b-bpx05keig2], .content h2[b-bpx05keig2], .content h4[b-bpx05keig2] {
+    margin: 0.5rem 0;
+    font-size: clamp(1rem, 5vw, 2rem); /* auto-scaling */
+}
+
+/* Responsive input */
+.content input[b-bpx05keig2] {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+}
+
+/* Responsive button */
+.btn-primary[b-bpx05keig2] {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
 }

@@ -1,19 +1,30 @@
 @page "/wordguess"
-@* @using Microsoft.AspNetCore.Components.Web *@
 
-<div>
-    <h1><b>WORD GUESS</b></h1><br>
-    <h2>Guess the word below:</h2>
-    <h2>@string.Join(" ", DisplayLetters)</h2>
+<PageTitle>Showcase | Word Guess</PageTitle>
 
-    <h4>Wrong guesses:</h4> <span>@string.Join(", ", WrongLetters)</span><br />
-    <h4>Remaining guesses:</h4> <span>@RemainingGuesses</span><br />
-    <h4>Total Wins:</h4> <span>@CountWins</span><br />
-    <h4>Total Losses:</h4> <span>@CountLosses</span><br />
+<div class="container">
+    <div class="content">
+        <h1><b>WORD GUESS</b></h1><br>
+        <h2>Guess the word below:</h2>
+        <h2>@string.Join(" ", DisplayLetters)</h2>
 
-    <input @bind="CurrentInput" @onkeydown="HandleKeyPress" maxlength="1" placeholder="Type a letter" />
-    <br><br><br><br><br><br>
-    <NavLink href="/showcase" class="btn btn-primary">← Back to Showcase</NavLink>
+        <h4>Wrong guesses:</h4> <span>@string.Join(", ", WrongLetters)</span><br />
+        <h4>Remaining guesses:</h4> <span>@RemainingGuesses</span><br />
+        <h4>Total Wins:</h4> <span>@CountWins</span><br />
+        <h4>Total Losses:</h4> <span>@CountLosses</span><br />
+
+        <input @bind="CurrentInput" 
+            @oninput="HandleInput"
+            maxlength="1" 
+            placeholder="Type a letter" 
+            inputmode="text"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="none"
+            spellcheck="false"/>
+        <br><br><br>
+        <NavLink href="/showcase" class="btn btn-primary">← Back to Showcase</NavLink>
+    </div>
 </div>
 
 @code {
@@ -51,13 +62,14 @@
         Console.WriteLine($"Selected Word: {SelectedWord}");
     }
 
-    private async Task HandleKeyPress(KeyboardEventArgs e)
+    private async Task HandleInput(ChangeEventArgs e)
     {
-        if (e.Key.Length == 1 && char.IsLetter(e.Key[0]))
+        if (e.Value is string input && input.Length == 1 && char.IsLetter(input[0]))
         {
-            var guessedChar = char.ToLower(e.Key[0]);
+            var guessedChar = char.ToLower(input[0]);
 
             CheckLetter(guessedChar);
+            CurrentInput = ""; 
             await RoundComplete();
         }
     }
