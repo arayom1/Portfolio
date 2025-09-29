@@ -1,0 +1,313 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.page[b-xn2l5aia1e] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;            
+    background-image: linear-gradient(180deg, rgb(43, 39, 39) 0%, rgb(3, 3, 3) 70%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /Layout/NavMenu.razor.rz.scp.css */
+.top_row[b-r1r623j3hl]{
+    background-image: linear-gradient(to right, rgb(5, 5, 5) 0%, rgb(30, 32, 36) 70%);
+}
+
+.title[b-r1r623j3hl]{
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.nav-link[b-r1r623j3hl] {
+    color: rgb(255, 255, 255);
+    text-decoration: none;  
+    transition: 0.3s;  
+}
+  
+.nav-link:hover[b-r1r623j3hl] {
+    color: #77b0ea;     
+}
+  
+.nav-link.active[b-r1r623j3hl] {
+    color: #dc3545; 
+}
+
+.menu[b-r1r623j3hl]{
+    color: white;
+    padding: 5px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.navbar-toggler[b-r1r623j3hl] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand[b-r1r623j3hl] {
+    font-size: 1.1rem;
+}
+
+.navbar-toggler-icon[b-r1r623j3hl] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Custom breakpoint where hamburger goes away */
+@media (min-width: 880px) {
+    .navbar .navbar-collapse[b-r1r623j3hl] {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    .navbar-toggler[b-r1r623j3hl] {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 879px) {
+    .navbar .navbar-collapse[b-r1r623j3hl] {
+      display: none;
+    }
+  
+    .navbar-collapse.show[b-r1r623j3hl] {
+      display: block !important;
+    }
+  
+    .navbar-toggler[b-r1r623j3hl] {
+      display: block;
+    }
+}
+/* /Pages/About.razor.rz.scp.css */
+.container[b-z3ql9vh71g]{
+    padding: 10px;
+}
+
+.centered-content[b-z3ql9vh71g] {
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.4); 
+    overflow: auto; 
+}
+/* /Pages/Contact.razor.rz.scp.css */
+.container[b-wxj0ji1blt]{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem auto; 
+}
+
+.form[b-wxj0ji1blt]{
+    padding: 2rem;
+}
+
+.centered-content[b-wxj0ji1blt] {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgba(101, 96, 96, 0.4);
+}
+
+textarea[b-wxj0ji1blt] {
+    max-height: 300px;
+    overflow-y: auto;
+    resize: vertical;
+}
+/* /Pages/Home.razor.rz.scp.css */
+.background-image[b-v9rf77xbvc] {
+    background-image: url('/images/profile.png');    
+    background-size: cover;                          
+    background-position: center;                     
+    background-repeat: no-repeat;                    
+    min-height: 80vh;                               
+    text-align: center;
+    padding: 60px;                                  
+}
+
+.centered-content[b-v9rf77xbvc] {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+/* /Pages/Projects.razor.rz.scp.css */
+.container[b-ytgg9p8ryo] {
+    padding: 10px;
+}
+
+.centered-content[b-ytgg9p8ryo] {
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);/* optional fade */
+}
+
+h2[b-ytgg9p8ryo] {
+    color: white;
+}
+
+.project-title[b-ytgg9p8ryo] {
+    height: 6rem;
+}
+/* /Pages/RockPaperScissors.razor.rz.scp.css */
+.container[b-fgbzdzhb6z]{
+    max-width: 650px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2rem; 
+    box-sizing: border-box;
+    background-color: rgba(151, 143, 143, 0.4);
+    text-align: center;
+}
+
+.header[b-fgbzdzhb6z]{
+    width: 100%;
+}
+
+section[b-fgbzdzhb6z] {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+button[b-fgbzdzhb6z] {
+    margin: 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(177, 173, 149);
+}
+
+button:hover[b-fgbzdzhb6z]{
+    color: #795308;
+}
+
+h1[b-fgbzdzhb6z] {
+    color: rgb(23, 210, 23);
+    margin-bottom: 20px;
+    
+}
+
+p[b-fgbzdzhb6z] {
+    color: antiquewhite;
+}
+
+h3[b-fgbzdzhb6z] {
+    color: yellow;
+}
+
+@media (max-width: 600px) {
+    h1[b-fgbzdzhb6z] {
+        font-size: 8vw;
+    }
+
+    section button[b-fgbzdzhb6z] {
+        font-size: 4vw;
+        padding: 1rem;
+    }
+}
+/* /Pages/Showcase.razor.rz.scp.css */
+.container[b-4lxr19nemt] {
+    padding: 50px;
+}
+
+.card-img-top[b-4lxr19nemt] {
+    height: 250px;           
+    object-fit: cover;       
+    width: 100%;             
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title[b-4lxr19nemt] {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h1[b-4lxr19nemt] {
+    color: white;
+}
+/* /Pages/WordGuess.razor.rz.scp.css */
+html[b-bpx05keig2], body[b-bpx05keig2] {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container[b-bpx05keig2]{
+    width: 90%;
+    max-width: 650px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(206, 190, 190, 0.4);
+    margin: 0px auto;
+}
+
+.content[b-bpx05keig2]{
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+h1[b-bpx05keig2] {
+    color: rgb(216, 166, 1);
+    margin-bottom: 20px;
+}
+
+/* Make headers responsive */
+.content h1[b-bpx05keig2], .content h2[b-bpx05keig2], .content h4[b-bpx05keig2] {
+    margin: 0.5rem 0;
+    font-size: clamp(1rem, 5vw, 2rem); /* auto-scaling */
+}
+
+/* Responsive input */
+.content input[b-bpx05keig2] {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+}
+
+/* Responsive button */
+.btn-primary[b-bpx05keig2] {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
